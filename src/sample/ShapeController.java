@@ -42,6 +42,14 @@ public class ShapeController {
         shapes2.add(o1);
         shapes2.add(o2);
 
+        l1.drawMe(gc);
+        l2.drawMe(gc);
+        r1.drawMe(gc);
+        r2.drawMe(gc);
+        o1.drawMe(gc);
+        o2.drawMe(gc);
+
+
 
 
 

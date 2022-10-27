@@ -37,20 +37,19 @@ abstract class MyShape {
     }
 
     public void setX1(double x1) {
-        this.x1 = Math.max(x1, 0);
+        this.x1 = x1;
     }
 
     public void setY1(double y1) {
-        this.y1 = Math.max(y1, 0);
+        this.y1 = y1;
     }
 
     public void setX2(double x2) {
-        this.x2 = Math.min(x2, MAX_SIZE);
-
+        this.x2 = x2;
     }
 
     public void setY2(double y2) {
-        this.y2 = Math.min(y2, MAX_SIZE);
+        this.y2 = y2;
     }
 
     public void setColor(Color color) {
