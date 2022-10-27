@@ -3,7 +3,12 @@ package sample;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-abstract class MyShape {
+import java.lang.Cloneable;
+
+/*
+An abstract class that defines shapes
+ */
+abstract class MyShape implements Cloneable {
     final static int MAX_SIZE = 200;
     private double x1, y1, x2, y2;
     private Color color;
@@ -56,6 +61,9 @@ abstract class MyShape {
         this.color = color;
     }
 
+    /*
+    Overriding Object's "equals" method that verifies that two forms are equal
+     */
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof MyShape) {
@@ -66,11 +74,14 @@ abstract class MyShape {
         return false;
     }
 
-    protected double calculateDistance(MyLine l1) {
-        // TODO: check that the method returns double
-        System.out.println("This is the distance: " + Math.sqrt((l1.getX1() - l1.getX2()) * (l1.getX1() - l1.getX2()) + (l1.getY1() - l1.getY2()) * (l1.getY1() - l1.getY2())));
-        return Math.sqrt((l1.getX1() - l1.getX2()) * (l1.getX1() - l1.getX2()) + (l1.getY1() - l1.getY2()) * (l1.getY1() - l1.getY2()));
-    }
-
+    /*
+    An abstract method for drawing the shape
+     */
     abstract void drawMe(GraphicsContext input);
+
+    /*
+    An abstract method for creating a clone for a shape
+     */
+    @Override
+    abstract protected Object clone() throws CloneNotSupportedException;
 }

@@ -3,6 +3,9 @@ package sample;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+/*
+A class representing an rectangle and inherits from the Area Shapes class
+ */
 public class MyRectangle extends MyBoundedShape
 {
 
@@ -11,6 +14,10 @@ public class MyRectangle extends MyBoundedShape
     {
         super(firstX, firstY, height, width, color, fill);
     }
+
+    /*
+    TODO: Add fill or not fill uses in draw the shape
+     */
 
     void drawMe(GraphicsContext input)
     {
@@ -22,10 +29,20 @@ public class MyRectangle extends MyBoundedShape
     @Override
     public boolean equals(Object obj)
     {
-        if (!(obj instanceof MyOval))
+        if (!(obj instanceof MyRectangle))
         {
             return false;
         }
         return super.equals(obj);
+    }
+
+    /*
+     A method for creating an identical ellipse and return it
+    */
+    @Override
+    protected Object clone()
+    {
+        MyRectangle l1 = new MyRectangle(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor(), this.getFill());
+        return l1;
     }
 }
