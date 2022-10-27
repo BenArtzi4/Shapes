@@ -16,7 +16,14 @@ public class MyOval extends MyBoundedShape
     void drawMe(GraphicsContext input)
     {
         // TODO: parameters of oval aren't good
-        input.setFill(this.getColor());
+        if (!this.getFill())
+        {
+            input.setFill(Color.WHITE);
+        }
+        else
+        {
+            input.setFill(this.getColor());
+        }
         input.fillOval(this.getX1(), this.getY1(), this.getX2(), this.getY2());
         input.strokeOval(this.getX1(), this.getY1(), this.getX2(), this.getY2());
     }

@@ -21,7 +21,14 @@ public class MyRectangle extends MyBoundedShape
 
     void drawMe(GraphicsContext input)
     {
-        input.setFill(this.getColor());
+        if (!this.getFill())
+        {
+            input.setFill(Color.WHITE);
+        }
+        else
+        {
+            input.setFill(this.getColor());
+        }
         input.fillRect(this.getX1(), this.getY1(), this.getX2(), this.getY2());
         input.strokeRect(this.getX1(), this.getY1(), this.getX2(), this.getY2());
     }
@@ -40,8 +47,7 @@ public class MyRectangle extends MyBoundedShape
      A method for creating an identical ellipse and return it
     */
     @Override
-    protected Object clone()
-    {
+    protected Object clone() throws CloneNotSupportedException {
         MyRectangle l1 = new MyRectangle(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor(), this.getFill());
         return l1;
     }

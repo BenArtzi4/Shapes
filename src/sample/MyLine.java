@@ -29,7 +29,7 @@ public class MyLine extends MyShape
     @Override
     void drawMe(GraphicsContext input)
     {
-        input.fillRect(this.getX1(), this.getY1(), this.getX2(), this.getY2());
+        input.setStroke(this.getColor());
         input.strokeLine(this.getX1(), this.getY1(), this.getX2(), this.getY2());
     }
 
