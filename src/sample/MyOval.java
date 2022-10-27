@@ -3,15 +3,19 @@ package sample;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class MyOval extends MyBoundedShape {
+
+public class MyOval extends MyBoundedShape
+{
 
 
-    public MyOval(double firstX, double firstY, double secondX, double secondY, Color color, boolean fill, double width, double length) {
-        super(firstX, firstY, secondX, secondY, color, fill, width, length);
+    public MyOval(double firstX, double firstY, double height, double width, Color color, boolean fill) {
+        super(firstX, firstY, height, width, color, fill);
     }
 
-    void drawMe(GraphicsContext input) {
 
+    void drawMe(GraphicsContext input)
+    {
+        input.strokeOval(this.getX1(), this.getY1(), this.getX2(), this.getY2());
     }
 
     @Override

@@ -1,6 +1,8 @@
 package sample;
 
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+
 
 public class MyLine extends MyShape
 {
@@ -18,5 +20,11 @@ public class MyLine extends MyShape
         return calculateDistance(this) == calculateDistance((MyLine) obj);
     }
 
+    @Override
+    void drawMe(GraphicsContext input)
+    {
+        input.fillRect(this.getX1(), this.getY1(), this.getX2(), this.getY2());
+        input.strokeLine(this.getX1(), this.getY1(), this.getX2(), this.getY2());
+    }
 
 }
