@@ -47,8 +47,7 @@ public class MyRectangle extends MyBoundedShape
      A method for creating an identical ellipse and return it
     */
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        MyRectangle l1 = new MyRectangle(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor(), this.getFill());
-        return l1;
+    public Object clone() {
+        return new MyRectangle(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor(), this.getFill());
     }
 }

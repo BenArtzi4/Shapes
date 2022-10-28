@@ -41,8 +41,7 @@ public class MyOval extends MyBoundedShape
     A method for creating an identical ellipse and return it
      */
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        MyOval l1 = new MyOval(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor(), this.getFill());
-        return l1;
+    public Object clone() {
+        return new MyOval(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor(), this.getFill());
     }
 }

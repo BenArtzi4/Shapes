@@ -37,7 +37,7 @@ public class ShapeController {
 
 
         /*
-        Adding the new shapes to second ArrayList
+        Adding to the  second ArrayList clones of the shapes that in the first one
          */
         ArrayList<MyShape> shapes2 = new ArrayList<MyShape>();
         for (MyShape shape : shapes1) {
@@ -61,12 +61,12 @@ public class ShapeController {
         /*
         Drawing the shapes in arraylists
          */
-        for (MyShape myShape : shapes1)
+        for (MyShape myShape : shapes2)
         {
             myShape.drawMe(gc);
         }
 
-        for (MyShape myShape : shapes2)
+        for (MyShape myShape : shapes1)
         {
             myShape.drawMe(gc);
         }

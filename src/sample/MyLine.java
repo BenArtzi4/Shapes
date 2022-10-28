@@ -34,9 +34,8 @@ public class MyLine extends MyShape
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        MyLine l1 = new MyLine(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor());
-        return l1;
+    public Object clone() {
+        return new MyLine(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor());
     }
 
     /*

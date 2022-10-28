@@ -9,7 +9,6 @@ import java.lang.Cloneable;
 An abstract class that defines shapes
  */
 abstract class MyShape implements Cloneable {
-    final static int MAX_SIZE = 200;
     private double x1, y1, x2, y2;
     private Color color;
 
