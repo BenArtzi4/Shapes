@@ -40,14 +40,16 @@ public class MyLine extends MyShape
     A method for creating a clone for the line
      */
     @Override
-    public Object clone() {
+    public Object clone()
+    {
         return new MyLine(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor());
     }
 
     /*
     A method for calculating the distance between two points
      */
-    private double calculateDistance(MyLine l1) {
+    private double calculateDistance(MyLine l1)
+    {
         // TODO: check that the method returns double
         System.out.println("This is the distance: " + Math.sqrt((l1.getX1() - l1.getX2()) * (l1.getX1() - l1.getX2()) + (l1.getY1() - l1.getY2()) * (l1.getY1() - l1.getY2())));
         return Math.sqrt((l1.getX1() - l1.getX2()) * (l1.getX1() - l1.getX2()) + (l1.getY1() - l1.getY2()) * (l1.getY1() - l1.getY2()));

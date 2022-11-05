@@ -7,14 +7,16 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class ShapeController {
+public class ShapeController
+{
 
     @FXML
     public Canvas cnv;
 
     public GraphicsContext gc;
 
-    public void initialize() throws CloneNotSupportedException {
+    public void initialize() throws CloneNotSupportedException
+    {
         gc = cnv.getGraphicsContext2D();
 
         // Creating two shapes from any shape with random sizes
@@ -39,7 +41,8 @@ public class ShapeController {
         Adding to the  second ArrayList clones of the shapes that in the first one
          */
         ArrayList<MyShape> shapes2 = new ArrayList<MyShape>();
-        for (MyShape shape : shapes1) {
+        for (MyShape shape : shapes1)
+        {
             shapes2.add((MyShape) (shape.clone()));
         }
 

@@ -8,11 +8,13 @@ import java.lang.Cloneable;
 /*
 An abstract class that defines shapes
  */
-abstract class MyShape implements Cloneable {
+abstract class MyShape implements Cloneable
+{
     private double x1, y1, x2, y2;
     private Color color;
 
-    public MyShape(double firstX, double firstY, double secondX, double secondY, Color color) {
+    public MyShape(double firstX, double firstY, double secondX, double secondY, Color color)
+    {
         setX1(firstX);
         setY1(firstY);
         setX2(secondX);
@@ -23,46 +25,56 @@ abstract class MyShape implements Cloneable {
     /*
     Getters
      */
-    public double getX1() {
+    public double getX1()
+    {
         return x1;
     }
 
-    public double getY1() {
+    public double getY1()
+    {
         return y1;
     }
 
-    public double getX2() {
+    public double getX2()
+    {
         return x2;
     }
 
-    public double getY2() {
+    public double getY2()
+    {
         return y2;
     }
 
-    public Color getColor() {
+    public Color getColor()
+    {
         return color;
     }
 
     /*
     Setters
      */
-    public void setX1(double x1) {
+    public void setX1(double x1)
+    {
         this.x1 = x1;
     }
 
-    public void setY1(double y1) {
+    public void setY1(double y1)
+    {
         this.y1 = y1;
     }
 
-    public void setX2(double x2) {
+    public void setX2(double x2)
+    {
         this.x2 = x2;
     }
 
-    public void setY2(double y2) {
+    public void setY2(double y2)
+    {
         this.y2 = y2;
     }
 
-    public void setColor(Color color) {
+    public void setColor(Color color)
+    {
         this.color = color;
     }
 
