@@ -17,7 +17,7 @@ public class MyRectangle extends MyBoundedShape
     }
 
     /*
-    TODO: Add fill or not fill uses in draw the shape
+    A method that draws the rectangle
      */
 
     void drawMe(GraphicsContext input)
@@ -30,6 +30,9 @@ public class MyRectangle extends MyBoundedShape
         input.strokeRect(this.getX1(), this.getY1(), this.getX2(), this.getY2());
     }
 
+    /*
+    A method that checks whether the height and length of the rectangles are equal
+    */
     @Override
     public boolean equals(Object obj)
     {
@@ -41,7 +44,7 @@ public class MyRectangle extends MyBoundedShape
     }
 
     /*
-     A method for creating an identical ellipse and return it
+     A method for creating an identical rectangle and return it
     */
     @Override
     public Object clone() {

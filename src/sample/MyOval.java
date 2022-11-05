@@ -12,7 +12,9 @@ public class MyOval extends MyBoundedShape
         super(firstX, firstY, height, width, color, fill);
     }
 
-
+    /*
+    A method that draws the oval
+    */
     void drawMe(GraphicsContext input)
     {
 
@@ -25,6 +27,10 @@ public class MyOval extends MyBoundedShape
         input.strokeOval(this.getX1(), this.getY1(), this.getX2(), this.getY2());
     }
 
+
+    /*
+    A method that checks whether the height and length of the ovals are equal
+    */
     @Override
     public boolean equals(Object obj)
     {
@@ -35,7 +41,7 @@ public class MyOval extends MyBoundedShape
     }
 
     /*
-    A method for creating an identical ellipse and return it
+    A method for creating an identical Oval and return it
      */
     @Override
     public Object clone() {

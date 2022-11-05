@@ -20,6 +20,9 @@ abstract class MyShape implements Cloneable {
         setColor(color);
     }
 
+    /*
+    Getters
+     */
     public double getX1() {
         return x1;
     }
@@ -40,6 +43,9 @@ abstract class MyShape implements Cloneable {
         return color;
     }
 
+    /*
+    Setters
+     */
     public void setX1(double x1) {
         this.x1 = x1;
     }

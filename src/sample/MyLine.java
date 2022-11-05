@@ -26,6 +26,9 @@ public class MyLine extends MyShape
         return calculateDistance(this) == calculateDistance((MyLine) obj);
     }
 
+    /*
+    A method that draws the line
+     */
     @Override
     void drawMe(GraphicsContext input)
     {
@@ -33,6 +36,9 @@ public class MyLine extends MyShape
         input.strokeLine(this.getX1(), this.getY1(), this.getX2(), this.getY2());
     }
 
+    /*
+    A method for creating a clone for the line
+     */
     @Override
     public Object clone() {
         return new MyLine(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor());
