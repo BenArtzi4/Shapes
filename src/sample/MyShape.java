@@ -64,15 +64,7 @@ abstract class MyShape implements Cloneable {
     Overriding Object's "equals" method that verifies that two forms are equal
      */
     @Override
-    public boolean equals(Object obj) {
-        //TODO CHANGE BY THE RULES
-        if (obj instanceof MyShape) {
-            return ((MyShape) obj).getX1() == this.x1 && ((MyShape) obj).getY1() == this.y1 &&
-                    ((MyShape) obj).getX2() == this.x2 && ((MyShape) obj).getY2() == this.y2
-                    && ((MyShape) obj).getColor().equals(this.color);
-        }
-        return false;
-    }
+    public abstract boolean equals(Object obj);
 
     /*
     An abstract method for drawing the shape
