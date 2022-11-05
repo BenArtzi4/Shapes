@@ -27,7 +27,7 @@ abstract class MyBoundedShape extends MyShape {
         if (!(obj instanceof MyBoundedShape)) {
             return false;
         }
-        return this.fill == ((MyBoundedShape) obj).getFill() && super.equals(obj);
+        return this.getX2() == ((MyBoundedShape) obj).getX2() && this.getY2() == ((MyBoundedShape) obj).getY2();
     }
 
 }

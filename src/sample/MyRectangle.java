@@ -2,6 +2,7 @@ package sample;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.FillRule;
 
 /*
 A class representing an rectangle and inherits from the Area Shapes class
@@ -21,15 +22,11 @@ public class MyRectangle extends MyBoundedShape
 
     void drawMe(GraphicsContext input)
     {
-        if (!this.getFill())
-        {
-            input.setFill(Color.WHITE);
-        }
-        else
+        if (this.getFill())
         {
             input.setFill(this.getColor());
+            input.fillRect(this.getX1(), this.getY1(), this.getX2(), this.getY2());
         }
-        input.fillRect(this.getX1(), this.getY1(), this.getX2(), this.getY2());
         input.strokeRect(this.getX1(), this.getY1(), this.getX2(), this.getY2());
     }
 

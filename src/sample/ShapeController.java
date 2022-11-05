@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -61,12 +60,12 @@ public class ShapeController {
         /*
         Drawing the shapes in arraylists
          */
-        for (MyShape myShape : shapes2)
+        for (MyShape myShape : shapes1)
         {
             myShape.drawMe(gc);
         }
 
-        for (MyShape myShape : shapes1)
+        for (MyShape myShape : shapes2)
         {
             myShape.drawMe(gc);
         }
