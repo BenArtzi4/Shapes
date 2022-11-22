@@ -93,5 +93,8 @@ abstract class MyShape implements Cloneable
     An abstract method for creating a clone for a shape
      */
     @Override
-    abstract protected Object clone() throws CloneNotSupportedException;
+    protected Object clone() throws CloneNotSupportedException
+    {
+        return super.clone();
+    }
 }

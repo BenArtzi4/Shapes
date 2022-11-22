@@ -41,13 +41,4 @@ public class MyRectangle extends MyBoundedShape
         }
         return super.equals(obj);
     }
-
-    /*
-     A method for creating an identical rectangle and return it
-    */
-    @Override
-    public Object clone()
-    {
-        return new MyRectangle(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor(), this.getFill());
-    }
 }

@@ -40,13 +40,4 @@ public class MyOval extends MyBoundedShape
         }
         return super.equals(obj);
     }
-
-    /*
-    A method for creating an identical Oval and return it
-     */
-    @Override
-    public Object clone()
-    {
-        return new MyOval(this.getX1(), this.getY1(), this.getX2(), this.getY2(), this.getColor(), this.getFill());
-    }
 }
